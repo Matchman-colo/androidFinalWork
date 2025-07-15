@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaintActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/paint_sum"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId">
+        <Button
+            android:id="@+id/paint_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:onClick="paint_back"
+            android:textSize="30dp"></Button>
+
+        <Button
+            android:id="@+id/paint_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="40dp"
+            android:onClick="savePng"
+            android:text="确定"
+            android:textSize="30dp"></Button>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paint_sum">
+
+        <Button
+            android:id="@+id/bnt_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setColor"
+            android:text="设置画笔颜色" />
+
+        <Button
+            android:id="@+id/bnt_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bnt_color"
+            android:onClick="setWidth"
+            android:text="设置画笔宽度"
+            tools:ignore="UnknownId" />
+
+        <Button
+            android:id="@+id/erase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="199dp"
+            android:layout_toRightOf="@id/bnt_color"
+            android:onClick="setErase"
+            android:text="橡皮擦"></Button>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bnt_width" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/res"
+        ></ImageView>
+</RelativeLayout>
